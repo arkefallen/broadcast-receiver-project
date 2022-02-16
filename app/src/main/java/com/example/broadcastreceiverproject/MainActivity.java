@@ -35,6 +35,7 @@ public class MainActivity<ACTION_CUSTOM_BROADCAST> extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent broadcastIntent = new Intent(ACTION_CUSTOM_BROADCAST);
+                broadcastIntent.putExtra("data","This is custom broadcast");
                 LocalBroadcastManager.getInstance(v.getContext()).sendBroadcast(broadcastIntent);
             }
         });

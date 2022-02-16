@@ -22,7 +22,7 @@ public class CustomReceiver extends BroadcastReceiver {
                 msg = "The power is disconnected";
                 break;
             case "ACTION_CUSTOM_BROADCAST":
-                msg = "This is custom broadcast";
+                msg = intent.getStringExtra("data");
                 break;
             default:
                 break;
